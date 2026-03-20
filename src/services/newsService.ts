@@ -17,7 +17,7 @@ interface NewsAPIResponse {
   message?: string
 }
 
-export async function fetchNewsArticles(keyword: string = 'technology'): Promise<NewsArticle[]> {
+export async function fetchNewsArticles(keyword: string = 'tesla'): Promise<NewsArticle[]> {
   const url = `${BASE_URL}/everything?q=${encodeURIComponent(keyword)}&pageSize=100&sortBy=publishedAt&language=en&apiKey=${API_KEY}`
 
   const response = await fetch(url)

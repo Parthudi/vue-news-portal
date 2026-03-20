@@ -12,7 +12,7 @@ export const useNewsStore = defineStore('news', () => {
   const loading = ref(false)
   const error = ref<string | null>(null)
   const currentPage = ref(1)
-  const searchKeyword = ref('technology')
+  const searchKeyword = ref('tesla')
   const selectedArticle = ref<NewsArticle | null>(null)
 
   const filteredNews = computed(() => {
@@ -49,7 +49,7 @@ export const useNewsStore = defineStore('news', () => {
   function setSearchKeyword(keyword: string) {
     searchKeyword.value = keyword
     currentPage.value = 1
-    fetchNews(keyword || 'technology')
+    fetchNews(keyword || 'tesla')
   }
 
   function setCurrentPage(page: number) {
